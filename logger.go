@@ -40,3 +40,13 @@ func (logger *Logger) Printf(format string, args ...interface{}) {
 //
 ////
 
+//// Wrapping log.Println
+//
+func (logger *Logger) Println(args ...interface{}) {
+	if logger.enabled == true {
+		log.Println(args)
+	}
+}
+//
+////
+
