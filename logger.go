@@ -126,3 +126,11 @@ func (logger *Logger) SetPrefix(prefix string) {
 //
 ////
 
+// Wrapping log.Flags
+//
+func (logger *Logger) Flags() int {
+	return log.Flags()
+}
+//
+////
+
