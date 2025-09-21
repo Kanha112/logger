@@ -118,3 +118,11 @@ func (logger *Logger) Prefix() string {
 //
 ////
 
+//// Wrapping log.SetPrefix
+//
+func (logger *Logger) SetPrefix(prefix string) {
+	log.SetPrefix(prefix)
+}
+//
+////
+
