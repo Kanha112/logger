@@ -2,6 +2,7 @@ package logger
 
 import (
 	"log"
+	"io"
 )
 
 //// Logger wraps logging functionality behind a boolean toggle
