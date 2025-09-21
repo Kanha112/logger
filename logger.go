@@ -102,7 +102,7 @@ func (logger *Logger) Panicf(format string, args ...interface{}) {
 
 //// Wrapping log.Panicln
 //
-func (logger *Logger) Panicln(args ...interface) {
+func (logger *Logger) Panicln(args ...interface{}) {
 	if logger.enabled == true {
 		log.Panicln(args)
 	}
