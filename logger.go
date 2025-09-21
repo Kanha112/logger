@@ -30,7 +30,7 @@ func NewLogger(enabledPrint bool, enabledPanic bool, enabledFatal bool) *Logger 
 //
 func (logger *Logger) Print(args ...interface{}) {
 	if logger.enabledPrint == true {
-		log.Print(args)
+		log.Print(args...)
 	}
 }	
 //
@@ -40,7 +40,7 @@ func (logger *Logger) Print(args ...interface{}) {
 //
 func (logger *Logger) Printf(format string, args ...interface{}) {
 	if logger.enabledPrint == true {
-		log.Printf(format, args)
+		log.Printf(format, args...)
 	}
 }	
 //
@@ -50,7 +50,7 @@ func (logger *Logger) Printf(format string, args ...interface{}) {
 //
 func (logger *Logger) Println(args ...interface{}) {
 	if logger.enabledPrint == true {
-		log.Println(args)
+		log.Println(args...)
 	}
 }
 //
@@ -60,7 +60,7 @@ func (logger *Logger) Println(args ...interface{}) {
 //
 func (logger *Logger) Fatal(args ...interface{}) {
 	if logger.enabledFatal == true {
-		log.Fatal(args)
+		log.Fatal(args...)
 	}
 }
 //
@@ -70,7 +70,7 @@ func (logger *Logger) Fatal(args ...interface{}) {
 //
 func (logger *Logger) Fatalf(format string, args ...interface{}) {
 	if logger.enabledFatal == true {
-		log.Fatalf(format, args)
+		log.Fatalf(format, args...)
 	}
 }
 //
@@ -80,7 +80,7 @@ func (logger *Logger) Fatalf(format string, args ...interface{}) {
 //
 func (logger *Logger) Fatalln(args ...interface{}) {
 	if logger.enabledFatal == true {
-		log.Fatalln(args)
+		log.Fatalln(args...)
 	}
 }
 //
@@ -90,7 +90,7 @@ func (logger *Logger) Fatalln(args ...interface{}) {
 //
 func (logger *Logger) Panic(args ...interface{}) {
 	if logger.enabledPanic == true {
-		log.Panic(args)
+		log.Panic(args...)
 	}
 }
 //
@@ -100,7 +100,7 @@ func (logger *Logger) Panic(args ...interface{}) {
 //
 func (logger *Logger) Panicf(format string, args ...interface{}) {
 	if logger.enabledPanic == true {
-		log.Panicf(format, args)
+		log.Panicf(format, args...)
 	}
 }
 //
@@ -110,7 +110,7 @@ func (logger *Logger) Panicf(format string, args ...interface{}) {
 //
 func (logger *Logger) Panicln(args ...interface{}) {
 	if logger.enabledPanic == true {
-		log.Panicln(args)
+		log.Panicln(args...)
 	}
 }
 //
