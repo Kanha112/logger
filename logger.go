@@ -156,3 +156,11 @@ func (logger *Logger) Output(calldepth int, s string) error {
 //
 ////
 
+//// Wrapping log.Writer
+//
+func (logger *Logger) Writer() io.Writer {
+	return log.Writer()
+}
+//
+////
+
