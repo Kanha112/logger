@@ -147,3 +147,12 @@ func (logger *Logger) SetFlags(flag int) {
 }
 //
 ////
+
+//// Wrapping log.Output
+//
+func (logger *Logger) Output(calldepth int, s string) error {
+	return log.Output(calldepth, s)
+}
+//
+////
+
