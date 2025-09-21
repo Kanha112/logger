@@ -20,6 +20,12 @@ func main() {
     // Instantiate a new logger using NewLogger(enablePrint, enablePanic, enableFatal)
     l := logger.NewLogger(true, false, true)
 
+    // Set a prefix
+    const prefix string = "[main function]"
+    l.SetPrefix(prefix)
+
+    // Set some flags
+    l.SetFlags(logger.Lshortfile | logger.Ltime | logger.Lmicroseconds | logger.Lmsgprefix)
 
     // log.Print
     l.Print("This is a test of Print")
