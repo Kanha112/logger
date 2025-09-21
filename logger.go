@@ -14,6 +14,21 @@ type Logger struct {
 //
 ////
 
+//// These flags define which text to prefix to each log entry (https://pkg.go.dev/log#pkg-constants)
+//
+const (
+	Ldate         = log.Ldate
+	Ltime         = log.Ltime
+	Lmicroseconds = log.Lmicroseconds
+	Llongfile     = log.Llongfile
+	Lshortfile    = log.Lshortfile
+	LUTC          = log.LUTC
+	Lmsgprefix    = log.Lmsgprefix
+	LstdFlags     = log.LstdFlags
+)
+//
+////
+
 //// Create a new Logger instance
 // 
 func NewLogger(enabledPrint bool, enabledPanic bool, enabledFatal bool) *Logger {
