@@ -23,7 +23,7 @@ func NewLogger(enabled bool) *Logger {
 //// Wrapping log.Print
 //
 func (logger *Logger) Print(args ...interface{}) {
-	if logger.enabled = true {
+	if logger.enabled == true {
 		log.Print(args)
 	}
 }	
