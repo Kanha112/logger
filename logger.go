@@ -62,7 +62,7 @@ func (logger *Logger) Fatal(args ...interface{}) {
 
 //// Wrapping log.Fatalf
 //
-func (logger *Logger) Fatalf(args ...interface{}) {
+func (logger *Logger) Fatalf(format string, args ...interface{}) {
 	if logger.enabled == true {
 		log.Fatalf(args)
 	}
