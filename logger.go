@@ -64,7 +64,7 @@ func (logger *Logger) Fatal(args ...interface{}) {
 //
 func (logger *Logger) Fatalf(format string, args ...interface{}) {
 	if logger.enabled == true {
-		log.Fatalf(args)
+		log.Fatalf(format, args)
 	}
 }
 //
