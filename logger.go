@@ -7,15 +7,21 @@ import (
 //// Logger wraps logging functionality behind a boolean toggle
 //
 type Logger struct {
-	enabled bool
+	enabledPrint bool // Enables Print/Printf/Println functionality
+	enabledPanic bool // Enables Panic/Panicf/Panicln functionality
+	enabledFatal bool // Enables Fatal/Fatalf/Fatalln functionality
 }
 //
 ////
 
 //// Create a new Logger instance
 // 
-func NewLogger(enabled bool) *Logger {
-	return &Logger { enabled: enabled }
+func NewLogger(enabledPrint bool, enabledPanic bool, enabledFatal bool) *Logger {
+	return &Logger {
+		enabledPrint: enabledPrint,
+		enabledPanic: enabledPanic,
+		enabledFatal: enabledFatal,
+	}
 }
 // 
 ////
@@ -23,7 +29,7 @@ func NewLogger(enabled bool) *Logger {
 //// Wrapping log.Print
 //
 func (logger *Logger) Print(args ...interface{}) {
-	if logger.enabled == true {
+	if logger.enabledPrint == true {
 		log.Print(args)
 	}
 }	
@@ -33,7 +39,7 @@ func (logger *Logger) Print(args ...interface{}) {
 //// Wrapping log.Printf
 //
 func (logger *Logger) Printf(format string, args ...interface{}) {
-	if logger.enabled == true {
+	if logger.enabledPrint == true {
 		log.Printf(format, args)
 	}
 }	
@@ -43,7 +49,7 @@ func (logger *Logger) Printf(format string, args ...interface{}) {
 //// Wrapping log.Println
 //
 func (logger *Logger) Println(args ...interface{}) {
-	if logger.enabled == true {
+	if logger.enabledPrint == true {
 		log.Println(args)
 	}
 }
@@ -53,7 +59,7 @@ func (logger *Logger) Println(args ...interface{}) {
 //// Wrapping log.Fatal
 //
 func (logger *Logger) Fatal(args ...interface{}) {
-	if logger.enabled == true {
+	if logger.enabledFatal == true {
 		log.Fatal(args)
 	}
 }
@@ -63,7 +69,7 @@ func (logger *Logger) Fatal(args ...interface{}) {
 //// Wrapping log.Fatalf
 //
 func (logger *Logger) Fatalf(format string, args ...interface{}) {
-	if logger.enabled == true {
+	if logger.enabledFatal == true {
 		log.Fatalf(format, args)
 	}
 }
@@ -73,7 +79,7 @@ func (logger *Logger) Fatalf(format string, args ...interface{}) {
 //// Wrapping log.Fatalln
 //
 func (logger *Logger) Fatalln(args ...interface{}) {
-	if logger.enabled == true {
+	if logger.enabledFatal == true {
 		log.Fatalln(args)
 	}
 }
@@ -83,7 +89,7 @@ func (logger *Logger) Fatalln(args ...interface{}) {
 //// Wrapping log.Panic
 //
 func (logger *Logger) Panic(args ...interface{}) {
-	if logger.enabled == true {
+	if logger.enabledPanic == true {
 		log.Panic(args)
 	}
 }
@@ -93,7 +99,7 @@ func (logger *Logger) Panic(args ...interface{}) {
 //// Wrapping log.Panicf
 //
 func (logger *Logger) Panicf(format string, args ...interface{}) {
-	if logger.enabled == true {
+	if logger.enabledPanic == true {
 		log.Panicf(format, args)
 	}
 }
@@ -103,7 +109,7 @@ func (logger *Logger) Panicf(format string, args ...interface{}) {
 //// Wrapping log.Panicln
 //
 func (logger *Logger) Panicln(args ...interface{}) {
-	if logger.enabled == true {
+	if logger.enabledPanic == true {
 		log.Panicln(args)
 	}
 }
