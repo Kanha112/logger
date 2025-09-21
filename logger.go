@@ -80,3 +80,33 @@ func (logger *Logger) Fatalln(args ...interface{}) {
 //
 ////
 
+//// Wrapping log.Panic
+//
+func (logger *Logger) Panic(args ...interface{}) {
+	if logger.enabled == true {
+		log.Panic(args)
+	}
+}
+//
+////
+
+//// Wrapping log.Panicf
+//
+func (logger *Logger) Panicf(format string, args ...interface{}) {
+	if logger.enabled == true {
+		log.Panicf(format, args)
+	}
+}
+//
+////
+
+//// Wrapping log.Panicln
+//
+func (logger *Logger) Panicln(args ...interface) {
+	if logger.enabled == true {
+		log.Panicln(args)
+	}
+}
+//
+////
+
