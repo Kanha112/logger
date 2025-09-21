@@ -12,52 +12,52 @@
 package main
 
 import (
-	"github.com/cqhudson/logger"
-)	
+    "github.com/cqhudson/logger"
+)   
 
 func main() {
-	
-	// Instantiate a new logger using NewLogger(enablePrint, enablePanic, enableFatal)
-	logger := logger.NewLogger(true, false, true)
+    
+    // Instantiate a new logger using NewLogger(enablePrint, enablePanic, enableFatal)
+    l := logger.NewLogger(true, false, true)
 
 
     // log.Print
-	logger.Print("This is a test of Print")
+    l.Print("This is a test of Print")
 
 
     // log.Printf
-	s := "Printf"
-	logger.Printf("This is a test of %s", s)
+    s := "Printf"
+    l.Printf("This is a test of %s", s)
 
 
     // log.Println
-	logger.Println("This is a test of Println")
+    l.Println("This is a test of Println")
 
 
     // log.Panic
-	logger.Panic("This is a test of Panic")
+    l.Panic("This is a test of Panic")
 
 
     // log.Panicf
-	s = "Panicf"
-	logger.Panicf("This is a test of %s", s)
+    s = "Panicf"
+    l.Panicf("This is a test of %s", s)
 
 
     // log.Panicln
-	logger.Panicln("This is a test of Panicln")
+    l.Panicln("This is a test of Panicln")
 
 
     // log.Fatal
-	logger.Fatal("This is a test of Fatal")
+    l.Fatal("This is a test of Fatal")
 
 
     // log.Fatalf
-	s = "Fatalf"
-	logger.Fatalf("This is a test of %s", s)
+    s = "Fatalf"
+    l.Fatalf("This is a test of %s", s)
 
 
     // log.Fatalln
-	logger.Fatalln("This is a test of Fatalln")
+    l.Fatalln("This is a test of Fatalln")
 }
 ```
 
@@ -93,9 +93,9 @@ Logging with logger:
 logPrints := true
 logPanics := false
 logFatals := false
-logger := logger.NewLogger(logPrints, logPanics, logFatals)
+l := logger.NewLogger(logPrints, logPanics, logFatals)
 
-logger.Print("About to do something")
+l.Print("About to do something")
 
 ...
 do something
@@ -103,5 +103,5 @@ do something
 do something
 ...
 
-logger.Print("Finished doing something")
+l.Print("Finished doing something")
 ```
