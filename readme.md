@@ -37,6 +37,7 @@ func main() {
     // log.Panic
 	logger.Panic("This is a test of Panic")
 
+
     // log.Panicf
 	s = "Panicf"
 	logger.Panicf("This is a test of %s", s)
