@@ -6,7 +6,7 @@
 
 1 - add `"github.com/cqhudson/logger"` to your package imports list
 
-2 - instantiate a new logger variable with `logger.NewLogger(bool)`, passing in `true` or `false` to enable or disable logging
+2 - instantiate a new logger variable with `logger.NewLogger(enablePrint, enablePanic, enableFatal)`, passing in `true` or `false` to enable or disable different logging types.
 
 ```go
 package main
@@ -17,8 +17,8 @@ import (
 
 func main() {
 	
-	// Instantiate a new logger, passing in true to enable logging
-	logger := logger.NewLogger(true)
+	// Instantiate a new logger using NewLogger(enablePrint, enablePanic, enableFatal)
+	logger := logger.NewLogger(true, false, true)
 
 
     // log.Print
@@ -90,8 +90,10 @@ if shouldLog == true {
 Logging with logger:
 
 ```go
-shouldLog := true
-logger := logger.NewLogger(shouldLog)
+logPrints := true
+logPanics := false
+logFatals := false
+logger := logger.NewLogger(logPrints, logPanics, logFatals)
 
 logger.Print("About to do something")
 
