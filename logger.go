@@ -70,3 +70,13 @@ func (logger *Logger) Fatalf(format string, args ...interface{}) {
 //
 ////
 
+//// Wrapping log.Fatalln
+//
+func (logger *Logger) Fatalln(args ...interface{}) {
+	if logger.enabled == true {
+		log.Fatalln(args)
+	}
+}
+//
+////
+
