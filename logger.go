@@ -110,3 +110,11 @@ func (logger *Logger) Panicln(args ...interface{}) {
 //
 ////
 
+//// Wrapping log.Prefix
+//
+func Prefix() string {
+	return log.Prefix()
+}
+//
+////
+
