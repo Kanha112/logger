@@ -50,3 +50,13 @@ func (logger *Logger) Println(args ...interface{}) {
 //
 ////
 
+//// Wrapping log.Fatal
+//
+func (logger *Logger) Fatal(args ...interface{}) {
+	if logger.enabled == true {
+		log.Fatal(args)
+	}
+}
+//
+////
+
